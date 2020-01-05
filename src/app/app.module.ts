@@ -18,12 +18,14 @@ import { MatTableModule } from '@angular/material/table';
 
 import { LoginComponent } from './component/login/login.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { CartComponent } from './component/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CartComponent]
 })
 export class AppModule { }

@@ -1,0 +1,20 @@
+<div class="container" fxLayout="column" >
+    <div *ngFor="let cart of carts">
+        <mat-card>
+            <div fxLayout="row" fxLayoutGap = 50px>
+                <div>
+                    {{cart.eventName}}
+                </div>
+                <div>
+                    {{cart.eventDate}}
+                </div>
+                <div>
+                    {{cart.price}}
+                </div>
+                <div>
+                    <button mat-raised-button (click)="book(cart)">Book Ticket</button>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>
