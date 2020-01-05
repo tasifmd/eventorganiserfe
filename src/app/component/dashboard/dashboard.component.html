@@ -1,0 +1,94 @@
+<div fxLayout="column" class="container">
+    <div>
+        <mat-toolbar color="primary">
+            <div fxLayout="row" fxLayoutGap=50px>
+                <div fxFlex=90 fxLayoutAlign="start center">
+                    <h1>My applicaion</h1>
+                </div>
+
+                <div>
+                   <button mat-raised-button>Mycart</button>
+                </div>
+
+                <div fxFlex=10 fxLayoutAlign="end center">
+                    <button mat-raised-button (click)='logout()'>Log Out</button>
+                </div>
+            </div>
+        </mat-toolbar>
+    </div>
+
+    <div>
+        <div>
+            <mat-card>
+                <div fxLayout="row" fxLayoutGap=30px>
+                    <div>
+                        <mat-card-content>
+                            Event Name
+                        </mat-card-content>
+                    </div>
+                    <div>
+                        <mat-card-content>
+                            Event Location
+                        </mat-card-content>
+                    </div>
+                    <div>
+                        <mat-card-content>
+                            Event Type
+                        </mat-card-content>
+                    </div>
+                    <div>
+                        <mat-card-content>
+                            Event Date
+                        </mat-card-content>
+                    </div>
+                    <div>
+                        <mat-card-content>
+                            Event Price
+                        </mat-card-content>
+                    </div>
+                </div>
+
+            </mat-card>
+        </div>
+        <div *ngFor="let event of events">
+            <div>
+                <div>
+                    <mat-card>
+                        <div fxLayout="row" fxLayoutGap=30px>
+                            <div>
+                                <mat-card-content>
+                                    {{event.eventName}}
+                                </mat-card-content>
+                            </div>
+                            <div>
+                                <mat-card-content>
+                                    {{event.eventLocation}}
+                                </mat-card-content>
+                            </div>
+                            <div>
+                                <mat-card-content>
+                                    {{event.eventType}}
+                                </mat-card-content>
+                            </div>
+                            <div>
+                                <mat-card-content>
+                                    {{event.eventDate}}
+                                </mat-card-content>
+                            </div>
+                            <div>
+                                <mat-card-content>
+                                    {{event.ticketCost}}
+                                </mat-card-content>
+                            </div>
+
+                            <div>
+                                <button mat-raised-button (click)="addtocart(event)">Add To Cart</button>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
